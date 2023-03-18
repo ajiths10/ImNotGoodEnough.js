@@ -18,18 +18,13 @@
  */
 const maxProfit = function (prices: number[]): number {
   let base = Infinity; //max value
-  let top = 0;
   let highProfit = 0;
 
   for (let i = 0; i < prices.length; i++) {
     if (prices[i] <= base) {
       base = prices[i];
-      top = 0;
-    } else if (prices[i] >= top) {
-      top = prices[i];
-      if (highProfit < top - base) {
-        highProfit = top - base;
-      }
+    } else if (prices[i] - base > highProfit) {
+      highProfit = prices[i] - base;
     }
   }
 
