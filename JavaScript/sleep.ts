@@ -10,6 +10,11 @@
  * let t = Date.now();
  * sleep(100).then(() => {
  * console.log(Date.now() - t); // 100});
+ * 
+ * @example 2
+ * Input: millis = 200
+ * Output: 200
+ * Explanation: It should return a promise that resolves after 200ms.
  */
 
 /**
