@@ -11,6 +11,13 @@
  * counter() = 10 // The first time counter() is called, it returns n.
  * counter() = 11 // Returns 1 more than the previous time.
  * counter() = 12 // Returns 1 more than the previous time.
+ * 
+ * @example 2 
+ * Input: 
+ * n = -2
+ * ["call","call","call","call","call"]
+ * Output: [-2,-1,0,1,2]
+ * Explanation: counter() initially returns -2. Then increases after each sebsequent call.
  */
 
 /**
@@ -23,8 +30,10 @@ var createCounter = function (n: number) {
   };
 };
 
-const counter = createCounter(10);
-console.log(counter()); // 10
-console.log(counter()); // 11
-console.log(counter()); // 12
+const counter = createCounter(-2);
+console.log(counter()); // -2
+console.log(counter()); // -1
+console.log(counter()); // 0
+console.log(counter()); // 1
+console.log(counter()); // 2
 
